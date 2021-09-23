@@ -1,23 +1,20 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Head from "next/head";
+import { Container, Heading, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <div className="container">
+    <Container>
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Cockroach Jamstack</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
+        <Heading as="h1">Cockroach Jamstack</Heading>
+        <Text>
           Get started by editing <code>pages/index.js</code>
-        </p>
+        </Text>
       </main>
-
-      <Footer />
-    </div>
-  )
+    </Container>
+  );
 }

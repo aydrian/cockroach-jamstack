@@ -1,3 +1,15 @@
 [build]
-  command = "npm run build"
-  publish = "out"
+command = "npm run build"
+publish = "out"
+
+[functions]
+node_bundler = "esbuild"
+external_node_modules = ["pg"]
+included_files = ["netlify/certs/*"]
+
+[template.environment]
+DB_HOST = "Database Host"
+DB_PORT = "Database Port"
+DB_DATABASE = "Database name with Cluster"
+DB_USER = "Database SQL User"
+DB_PASSWORD = "Database SQL User Password"
